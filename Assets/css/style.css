@@ -1,5 +1,56 @@
+/*=============== Google Font ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+/*.5rem = 8px | 1rem = 16px ...*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Primary brand color */
+  --color-primary: hsl(220, 90%, 56%);
+  --color-primary-dark: hsl(220, 90%, 46%);
+  --color-primary-darker: hsl(220, 90%, 36%);
+
+  /* Accent color*/
+  --color-acent: hsl(35, 100%, 50%);
+  --color-acent-dark: hsl(35, 100%, 32%);
+
+  /* Neutral for background & text */
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-gray: hsl(210, 20%, 95%);
+  --color-dark-gray: hsl(210, 10%, 23%);
+  --color-text: hsl(210, 15%, 15%);
+
+  /* Shadows */
+  --shadow-img: drop-shadow(0 12px 24px hsla(0, 0%, 0%, 0.25));
+  --shadow-circle: 0 12px 24px hsla(0, 0%, 0%, 0.25);
+  --shadow-button: 0 -4px 8px hsla(0, 0%, 0%, 0.15);
+  --shadow-card: 0 -8px 24px hsla(0, 0%, 0%, 0.2);
+  --shadow-text: 0 2px 4px var(--color-primary-dark);
+
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+  --second-font: "Titan One", sans-serif;
+  --biggest-font-size: 3.5rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
+}
+
+/*=============== BASE ===============*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
