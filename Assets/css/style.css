@@ -29,19 +29,23 @@
   --shadow-card: 0 -8px 24px hsla(0, 0%, 0%, 0.2);
   --shadow-text: 0 2px 4px var(--color-primary-dark);
 
-  /*========== Font and typography ==========*/
-  --body-font: "Poppins", sans-serif;
-  --second-font: "Titan One", sans-serif;
-  --biggest-font-size: 3.5rem;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: 0.938rem;
-  --small-font-size: 0.813rem;
+  /* Typography */
+  --font-body: "Poppins", sans-serif;
+  --font-secondary: "Titan One", sans-serif;
+  --font-size-xxl: 3.5rem;
+  --font-size-h1: 1.5rem;
+  --font-size-h2: 1.25rem;
+  --font-size-h3: 1rem;
+  --font-size-base: 0.938rem;
+  --font-size-sm: 0.813rem;
 
-  /*========== Font weight ==========*/
-  --font-regular: 400;
-  --font-semi-bold: 600;
+  /* Font weights */
+  --weight-regular: 400;
+  --weight-semibold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
 }
 
 /*=============== BASE ===============*/
@@ -56,4 +60,33 @@ html {
 }
 
 body {
+  font-family: var(--body-font);
+  font-size: var(--font-size-base);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== HEADER & NAV ===============*/
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  z-index: var(--z-fixed);
+  transition: box-shadow 0.4s;
 }
