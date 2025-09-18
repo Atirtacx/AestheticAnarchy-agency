@@ -10,7 +10,7 @@
   /*Primary brand color */
   --color-primary: hsl(220, 90%, 56%);
   --color-primary-dark: hsl(220, 90%, 46%);
-  --color-primary-darker: hsl(220, 90%, 36%);
+  --color-secondary: hsl(220, 67%, 60%);
 
   /* Accent color*/
   --color-acent: hsl(35, 100%, 50%);
@@ -62,8 +62,8 @@ html {
 body {
   font-family: var(--body-font);
   font-size: var(--font-size-base);
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-primary);
 }
 
 ul {
@@ -80,6 +80,18 @@ img {
   height: auto;
 }
 
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --biggest-font-size: 5.5rem;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+  }
+}
+
 /*=============== HEADER & NAV ===============*/
 .header {
   position: fixed;
@@ -90,3 +102,44 @@ img {
   z-index: var(--z-fixed);
   transition: box-shadow 0.4s;
 }
+
+/* Navigation for mobile devices */
+.nav {
+  position: relative;
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  color: var(--color-text);
+  font-family: var(--font-secondary);
+  font-weight: 1000;
+}
+
+.nav__close,
+.nav__toggle {
+  display: flex;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+@media screen and (max-width: 1150px) {
+  .nav-menu {
+    position: fixed;
+    left: -10%;
+    top: 0;
+    background-color: var(--color-primary);
+    width: 100%;
+    height: 100%;
+    padding: 7rem 1.5rem 2.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: left 0.4s;
+  }
+}
+
+.nav-list;
