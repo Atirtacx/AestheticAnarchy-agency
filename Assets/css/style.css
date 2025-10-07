@@ -184,3 +184,36 @@ img {
 .nav-link:hover {
   color: var(--color-secondary);
 }
+
+.nav__close {
+  position: absolute;
+  top: 1.15rem;
+  right: 1.5rem;
+}
+
+.nav-social {
+  column-gap: 1rem;
+  align-self: flex-end;
+}
+
+.nav__social-link {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  transition: color 0.4s;
+}
+
+.nav__social-link:hover {
+  color: var(--color-secondary);
+}
+
+.show-menu {
+  left: 0;
+}
+
+.shadow-header {
+  box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.15);
+}
+
+.active-link {
+  color: var(--color-secondary);
+}
